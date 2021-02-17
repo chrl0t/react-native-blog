@@ -39,6 +39,12 @@ const IndexScreen = ({ navigation }) => {
   );
 };
 
+IndexScreen.navigationOptions = () => {
+  return {
+    headerRight: () => <Feather style={styles.add} name='plus' size={30} />
+  };
+};
+
 const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
@@ -52,6 +58,9 @@ const styles = StyleSheet.create({
   },
   icon: {
     fontSize: 24
+  },
+  add: {
+    marginRight: 10
   }
 });
 
