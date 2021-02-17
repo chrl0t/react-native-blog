@@ -39,9 +39,13 @@ const IndexScreen = ({ navigation }) => {
   );
 };
 
-IndexScreen.navigationOptions = () => {
+IndexScreen.navigationOptions = ({ navigation }) => {
   return {
-    headerRight: () => <Feather style={styles.add} name='plus' size={30} />
+    headerRight: () => (
+      <TouchableOpacity onPress={() => navigation.navigate("Create")}>
+        <Feather style={styles.add} name='plus' size={30} />
+      </TouchableOpacity>
+    )
   };
 };
 
