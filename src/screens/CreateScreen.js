@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, StyleSheet, TextInput, Button } from "react-native";
 import { Context } from "../context/BlogContext";
 
 const CreateScreen = ({ navigation }) => {
@@ -19,6 +19,7 @@ const CreateScreen = ({ navigation }) => {
         value={content}
         onChangeText={(text) => setContent(text)}
       />
+      <Button title='Add Blog Post' />
     </View>
   );
 };
